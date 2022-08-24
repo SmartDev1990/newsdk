@@ -1,5 +1,5 @@
 import { ChainTokenMap, TokenMap } from '../types'
-import { SUSHI_ADDRESS, USDC_ADDRESS, USD_ADDRESS, WETH9_ADDRESS, WNATIVE_ADDRESS } from './addresses'
+import { RICE_ADDRESS, SUSHI_ADDRESS, USDC_ADDRESS, USD_ADDRESS, WETH9_ADDRESS, WNATIVE_ADDRESS } from './addresses'
 
 import { ChainId } from '../enums'
 import { Token } from '../entities/Token'
@@ -14,12 +14,12 @@ export const USDC: TokenMap = {
 
 export const USD: TokenMap = {
   ...USDC,
-  [ChainId.CELO]: new Token(ChainId.CELO, USD_ADDRESS[ChainId.CELO], 18, 'cUSD', 'Celo Dollar'),
+  [ChainId.BITGERT]: new Token(ChainId.BITGERT, USDC_ADDRESS[ChainId.BITGERT], 6, 'USDC', 'USD Coin'),
 }
 
-xport const WNATIVE: TokenMap = {
-  [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
-  [ChainId.BITGERT]: WETH9[ChainId.BITGERT],
+export const WNATIVE: TokenMap = {
+  [ChainId.ETHEREUM]: new Token(ChainId.ETHEREUM, WNATIVE_ADDRESS[ChainId.ETHEREUM], 18, 'WETH', 'Wrapped Ethereum'),
+  [ChainId.BITGERT]: new Token(ChainId.BITGERT, WNATIVE_ADDRESS[ChainId.BITGERT], 18, 'WBRISE', 'Wrapped Brise'),
   [ChainId.MATIC]: new Token(ChainId.MATIC, WNATIVE_ADDRESS[ChainId.MATIC], 18, 'WMATIC', 'Wrapped Matic'),
   [ChainId.MATIC_TESTNET]: new Token(
     ChainId.MATIC_TESTNET,
@@ -36,7 +36,6 @@ xport const WNATIVE: TokenMap = {
     'WBNB',
     'Wrapped BNB'
   ),
-  [ChainId.ARBITRUM_NOVA]: WETH9[ChainId.ARBITRUM_NOVA],
 }
 
 export const RICE: ChainTokenMap = {

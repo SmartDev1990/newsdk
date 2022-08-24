@@ -2,6 +2,7 @@ import {
   Bitgert,
   Binance,
   Ether,
+  Matic,
 } from '../entities/Native'
 
 import { ChainId } from '../enums'

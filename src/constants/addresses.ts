@@ -1,6 +1,13 @@
 import { AddressMap } from '../types'
 import { ChainId } from '../enums'
 
+export const SUSHI_ADDRESS: AddressMap = {
+  [ChainId.ETHEREUM]: '',
+  [ChainId.BITGERT]: '0x1eb697Cb6F457F6a65C682F7f7c65F9f2E622A34',
+  [ChainId.MATIC]: '',
+  [ChainId.BSC]: '',
+}
+
 export const RICE_ADDRESS: AddressMap = {
   [ChainId.ETHEREUM]: '',
   [ChainId.BITGERT]: '0x1eb697Cb6F457F6a65C682F7f7c65F9f2E622A34',
@@ -141,8 +148,7 @@ export const SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS: AddressMap = {
   [ChainId.ETHEREUM]: '0xB527C5295c4Bc348cBb3a2E96B2494fD292075a7',
   [ChainId.BITGERT]: '0x71c8ebeda911af79a3fb01655aa4e3c1c31a4525',
   [ChainId.MATIC]: '0xDB6C4EDd9545d3b815dA85E6429B699c418886f9',
-  [ChainId.XDAI]: '0x07b6e34EeCF38B02e83b6B4702699717e298967E',
-  [ChainId.BSC]: '0x1B16149Edaf1EFa6ADE6aEEF33e63C6e08c9bB1B',,
+  [ChainId.BSC]: '0x1B16149Edaf1EFa6ADE6aEEF33e63C6e08c9bB1B',
 }
 
 export const PEGGED_ORACLE_ADDRESS = ''

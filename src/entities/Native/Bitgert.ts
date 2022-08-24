@@ -15,10 +15,10 @@ export class Bitgert extends NativeCurrency {
     return wnative
   }
 
-  private static _cache: { [chainId: number]: Binance } = {}
+  private static _cache: { [chainId: number]: Bitgert } = {}
 
-  public static onChain(chainId: number): Binance {
-    return this._cache[chainId] ?? (this._cache[chainId] = new Binance(chainId))
+  public static onChain(chainId: number): Bitgert {
+    return this._cache[chainId] ?? (this._cache[chainId] = new Bitgert(chainId))
   }
 
   public equals(other: Currency): boolean {
